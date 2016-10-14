@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "fdeee77cec8b6ef3c6c5a49e75a3dbf9"
+build_time: [529729067, 296245000]
+inputs:
+  "/Users/atyun-monitor/Desktop/Swift/Swift-ViewAnimationDemo/Swift-ViewAnimationDemo/ViewController.swift": [529729067, 0]
+  "/Users/atyun-monitor/Desktop/Swift/Swift-ViewAnimationDemo/Swift-ViewAnimationDemo/AppDelegate.swift": [529580281, 0]
