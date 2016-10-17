@@ -111,6 +111,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -130,17 +131,30 @@ SWIFT_CLASS("_TtC23Swift_ViewAnimationDemo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIActivityIndicatorView;
-@class UIButton;
-@class UILabel;
-@class UITextField;
 @class UIImageView;
 @class NSBundle;
 @class NSCoder;
 
+SWIFT_CLASS("_TtC23Swift_ViewAnimationDemo42KeyframeAnimationsControllerViewController")
+@interface KeyframeAnimationsControllerViewController : UIViewController
+@property (nonatomic, readonly, strong) UIImageView * _Nonnull planeImage;
+- (void)viewDidLoad;
+- (void)planeDepart;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIActivityIndicatorView;
+@class UIButton;
+@class UIImage;
+@class UILabel;
+@class UITextField;
+
 SWIFT_CLASS("_TtC23Swift_ViewAnimationDemo14ViewController")
 @interface ViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified heading;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified bgImageView;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified username;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified password;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified couldOne;
@@ -148,11 +162,20 @@ SWIFT_CLASS("_TtC23Swift_ViewAnimationDemo14ViewController")
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified couldThree;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified couldFour;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified loginButton;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified status;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified label;
+@property (nonatomic) CGPoint statusPostion;
+@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull messages;
 @property (nonatomic, strong) UIActivityIndicatorView * _Nonnull spinner;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
 - (IBAction)loginButtonClick:(UIButton * _Nonnull)sender;
+- (void)showMessageWithIndex:(NSInteger)index;
+- (void)removeMessageWithIndex:(NSInteger)index;
+- (void)resetForm;
+- (void)animateCloudWithCloud:(UIImageView * _Nonnull)cloud;
+- (void)fadeImageViewWithImageView:(UIImageView * _Nonnull)imageView toImage:(UIImage * _Nonnull)toImage showEffects:(BOOL)showEffects;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

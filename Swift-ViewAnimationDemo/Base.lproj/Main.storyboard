@@ -65,12 +65,25 @@
                                     <action selector="loginButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xY0-o7-hjD"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status.png" translatesAutoresizingMaskIntoConstraints="NO" id="SMF-xZ-LPD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="279" id="MVc-Oe-nib"/>
+                                    <constraint firstAttribute="height" constant="43" id="gxO-92-cwy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzg-qb-Fc1">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.94151902198791504" green="0.59652811288833618" blue="0.21802693605422974" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rQ6-EH-evP" firstAttribute="top" secondItem="EmO-0s-0LE" secondAttribute="bottom" constant="18" id="AbI-Xg-oPQ"/>
+                            <constraint firstItem="SMF-xZ-LPD" firstAttribute="centerX" secondItem="Uel-G5-nJi" secondAttribute="centerX" id="2L6-gp-bHu"/>
                             <constraint firstItem="tot-U4-ZwK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Edy-P3-B5j"/>
                             <constraint firstItem="rQ6-EH-evP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="HrP-eQ-dsr"/>
+                            <constraint firstItem="nzg-qb-Fc1" firstAttribute="centerY" secondItem="SMF-xZ-LPD" secondAttribute="centerY" id="IrI-HG-O5P"/>
+                            <constraint firstItem="rQ6-EH-evP" firstAttribute="top" secondItem="EmO-0s-0LE" secondAttribute="bottom" constant="9" id="J6Q-9k-PvV"/>
                             <constraint firstItem="EmO-0s-0LE" firstAttribute="top" secondItem="NAK-mc-jQp" secondAttribute="bottom" constant="8" id="Kb5-cz-5cG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rQ6-EH-evP" secondAttribute="trailing" constant="71" id="X05-aB-kE0"/>
                             <constraint firstItem="rQ6-EH-evP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YEh-9h-skk"/>
@@ -81,27 +94,33 @@
                             <constraint firstItem="Uel-G5-nJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="pJG-k9-0bl"/>
                             <constraint firstItem="NAK-mc-jQp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qRc-PU-M6A"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uel-G5-nJi" secondAttribute="bottom" id="skH-Hj-DqB"/>
+                            <constraint firstItem="nzg-qb-Fc1" firstAttribute="centerX" secondItem="SMF-xZ-LPD" secondAttribute="centerX" id="tG5-oP-Jdn"/>
+                            <constraint firstItem="SMF-xZ-LPD" firstAttribute="top" secondItem="EmO-0s-0LE" secondAttribute="bottom" constant="8" id="udv-sJ-TNQ"/>
                             <constraint firstItem="tot-U4-ZwK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="137" id="xSI-uF-87v"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bgImageView" destination="Uel-G5-nJi" id="Jyz-Cj-VBh"/>
                         <outlet property="couldFour" destination="doj-7k-w9V" id="XSQ-xk-Rny"/>
                         <outlet property="couldOne" destination="liu-QC-OLv" id="T7k-h8-66f"/>
                         <outlet property="couldThree" destination="SCb-Cy-tcn" id="OHk-dA-Ekt"/>
                         <outlet property="couldTwo" destination="0U0-g1-iaX" id="yJv-Dg-okq"/>
                         <outlet property="heading" destination="tot-U4-ZwK" id="Xx6-l1-yMV"/>
+                        <outlet property="label" destination="nzg-qb-Fc1" id="pBz-KQ-EYd"/>
                         <outlet property="loginButton" destination="rQ6-EH-evP" id="ufg-w3-LHk"/>
                         <outlet property="password" destination="EmO-0s-0LE" id="Fbh-4Q-aZH"/>
+                        <outlet property="status" destination="SMF-xZ-LPD" id="DTj-hE-TYO"/>
                         <outlet property="username" destination="NAK-mc-jQp" id="Wap-hc-Qpa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="-580"/>
+            <point key="canvasLocation" x="-804" y="-627"/>
         </scene>
     </scenes>
     <resources>
         <image name="could.png" width="406" height="293"/>
         <image name="image1.JPG" width="1080" height="1920"/>
+        <image name="status.png" width="200" height="31"/>
     </resources>
 </document>
